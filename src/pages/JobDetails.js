@@ -16,7 +16,7 @@ class HomePage extends Component {
     async componentDidMount() {
         try {
             const jobID = this.props.match.params.jobID;
-            const res = await axios.get(`https://jobs.github.com/positions/${jobID}.json`);
+            const res = await axios.get(`https://github-jobs-proxy.appspot.com/positions/${jobID}.json`);
             const jobItem = res.data;
             this.setState({
                 jobItem

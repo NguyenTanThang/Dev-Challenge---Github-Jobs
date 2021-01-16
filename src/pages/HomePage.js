@@ -23,7 +23,7 @@ class HomePage extends Component {
 
     async componentDidMount() {
         try {
-            const res = await axios.get(`https://jobs.github.com/positions.json?full_time=true`);
+            const res = await axios.get(`https://github-jobs-proxy.appspot.com/positions.json?full_time=true`);
             const jobList = res.data;
             this.setState({
                 jobList
